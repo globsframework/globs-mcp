@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <description>Expose GlobTypes as Model Context Protocol tools</description>
+    <url>https://globsframework.org</url>
+    <groupId>org.globsframework</groupId>
+    <packaging>jar</packaging>
+    <artifactId>globs-mcp</artifactId>
+    <name>Generic Lightweight ObjectS mcp</name>
+    <version>0.1-SNAPSHOT</version>
+
+    <developers>
+        <developer>
+            <name>Marc Guiot</name>
+            <email>marc.guiot@free.fr</email>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>Apache License</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>github-globsframework</id>
+            <url>https://maven.pkg.github.com/globsframework/*</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.15.0</version>
+                <configuration>
+                    <source>21</source>
+                    <target>21</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.globsframework</groupId>
+            <artifactId>globs</artifactId>
+            <version>5.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.globsframework</groupId>
+            <artifactId>globs-gson</artifactId>
+            <version>5.2.0</version>
+        </dependency>
+        <!-- optional: only needed by org.globsframework.mcp.http (the HttpServerRegister bridge) -->
+        <dependency>
+            <groupId>org.globsframework</groupId>
+            <artifactId>globs-http</artifactId>
+            <version>5.2-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <!-- optional: only needed by org.globsframework.mcp.sql (the SqlService bridge) -->
+        <dependency>
+            <groupId>org.globsframework</groupId>
+            <artifactId>globs-sql</artifactId>
+            <version>5.2-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- globs-sql ships no JDBC driver on purpose; the tests bring their own in-memory one -->
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.7.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>6.1.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>6.1.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
+            <version>2.26.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.26.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>

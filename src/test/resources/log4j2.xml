@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- stdout is the MCP stdio transport: every log goes to stderr, never to stdout. -->
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="stderr" target="SYSTEM_ERR">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="warn">
+            <AppenderRef ref="stderr"/>
+        </Root>
+    </Loggers>
+</Configuration>
