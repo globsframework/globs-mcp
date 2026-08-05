@@ -34,6 +34,21 @@
         </repository>
     </repositories>
 
+    <scm>
+        <connection>scm:git:git@github.com:globsframework/globs-mcp</connection>
+        <developerConnection>scm:git:git@github.com:globsframework/globs-mcp</developerConnection>
+        <url>https://github.com/globsframework/globs-mcp</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>github-globsframework</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/${env.GITHUB_REPOSITORY}</url>
+        </repository>
+    </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
