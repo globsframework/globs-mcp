@@ -5,7 +5,6 @@ import org.globsframework.core.metamodel.GlobTypeBuilder;
 import org.globsframework.core.metamodel.GlobTypeBuilderFactory;
 import org.globsframework.core.metamodel.fields.StringField;
 import org.globsframework.json.annottations.IsJsonContent;
-import org.globsframework.json.annottations.IsJsonContent_;
 
 /**
  * An incoming JSON-RPC 2.0 message.
@@ -19,12 +18,10 @@ public class JsonRpcRequest {
 
     public static final StringField jsonrpc;
 
-    @IsJsonContent_
     public static final StringField id;
 
     public static final StringField method;
 
-    @IsJsonContent_
     public static final StringField params;
 
     static {

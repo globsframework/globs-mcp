@@ -67,25 +67,25 @@
         <dependency>
             <groupId>org.globsframework</groupId>
             <artifactId>globs</artifactId>
-            <version>5.9.0</version>
+            <version>5.13-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.globsframework</groupId>
             <artifactId>globs-gson</artifactId>
-            <version>5.2.0</version>
+            <version>5.4-SNAPSHOT</version>
         </dependency>
         <!-- optional: only needed by org.globsframework.mcp.http (the HttpServerRegister bridge) -->
         <dependency>
             <groupId>org.globsframework</groupId>
             <artifactId>globs-http</artifactId>
-            <version>5.2-SNAPSHOT</version>
+            <version>5.3-SNAPSHOT</version>
             <optional>true</optional>
         </dependency>
         <!-- optional: only needed by org.globsframework.mcp.sql (the SqlService bridge) -->
         <dependency>
             <groupId>org.globsframework</groupId>
             <artifactId>globs-sql</artifactId>
-            <version>5.2-SNAPSHOT</version>
+            <version>5.3-SNAPSHOT</version>
             <optional>true</optional>
         </dependency>
 

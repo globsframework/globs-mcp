@@ -3,12 +3,10 @@ package org.globsframework.mcp.model;
 import org.globsframework.core.metamodel.GlobType;
 import org.globsframework.core.metamodel.GlobTypeBuilder;
 import org.globsframework.core.metamodel.GlobTypeBuilderFactory;
-import org.globsframework.core.metamodel.annotations.Target;
 import org.globsframework.core.metamodel.fields.BooleanField;
 import org.globsframework.core.metamodel.fields.GlobArrayField;
 import org.globsframework.core.metamodel.fields.StringField;
 import org.globsframework.json.annottations.IsJsonContent;
-import org.globsframework.json.annottations.IsJsonContent_;
 
 /**
  * The result of {@code tools/call}. {@code content} is what the model reads; {@code structuredContent}
@@ -21,10 +19,8 @@ import org.globsframework.json.annottations.IsJsonContent_;
 public class CallToolResult {
     public static final GlobType TYPE;
 
-    @Target(TextContent.class)
     public static final GlobArrayField<TextContent> content;
 
-    @IsJsonContent_
     public static final StringField structuredContent;
 
     public static final BooleanField isError;

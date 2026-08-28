@@ -6,7 +6,6 @@ import org.globsframework.core.metamodel.GlobTypeBuilderFactory;
 import org.globsframework.core.metamodel.fields.IntegerField;
 import org.globsframework.core.metamodel.fields.StringField;
 import org.globsframework.json.annottations.IsJsonContent;
-import org.globsframework.json.annottations.IsJsonContent_;
 
 public class JsonRpcError {
     public static final GlobType TYPE;
@@ -15,7 +14,6 @@ public class JsonRpcError {
 
     public static final StringField message;
 
-    @IsJsonContent_
     public static final StringField data;
 
     static {
