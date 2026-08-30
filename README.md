@@ -7,6 +7,10 @@ decodes what it sends back. In Java that normally means a POJO plus an annotatio
 `Map<String, Object>` with no types at all. A `GlobType` is already a schema, available at runtime —
 so the tool definition is the type, and nothing is generated.
 
+> **Status: prototype.** The artifact is not published anywhere yet — build it locally (`mvn -o install`)
+> and depend on `org.globsframework:globs-mcp:0.1-SNAPSHOT`. Java 21; `globs`, `globs-gson`, and
+> `globs-http` / `globs-sql` for the two bridges.
+
 ## In two minutes
 
 ```java
@@ -140,3 +144,21 @@ An unknown tool or malformed arguments are JSON-RPC errors instead, as the spec 
 
 `GlobJsonSchema` is independent of all of this: it turns a `GlobType` into a JSON Schema and is just as
 useful for structured output or for any other tool-calling API.
+
+
+## Building
+
+```bash
+mvn -o test
+mvn -o install      # the artifact is not published; install it locally to depend on it
+```
+
+## License
+
+Apache License 2.0 — see <https://www.apache.org/licenses/LICENSE-2.0.txt>.
+
+## Links
+
+- [Globs Framework](https://globsframework.org)
+- [Model Context Protocol](https://modelcontextprotocol.io)
+- [globs-http](https://github.com/globsframework/globs-http) · [globs-db](https://github.com/globsframework/globs-db) — the two bridges' sources
