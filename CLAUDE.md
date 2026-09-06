@@ -63,7 +63,7 @@ generator in globs-http declares it a `string`.
 ### Protocol layer
 
 `model/` holds the MCP and JSON-RPC messages as GlobTypes, one class per message, same style as
-`globs-http`'s `openapi/model`. Three fields are `@IsJsonContent_` raw JSON on purpose:
+`globs-http`'s `openapi/model`. Three fields carry `IsJsonContent`, staying raw JSON on purpose:
 
 - `JsonRpcRequest.id` — an id is a string *or* a number and must be echoed back byte-identical.
 - `JsonRpcRequest.params` / `CallToolParams.arguments` — their shape depends on the method, or on which

@@ -26,8 +26,8 @@ new McpStdioServer(mcp.complete()).run();
 ```
 
 `input` is a `Glob` of the declared type — decoded, typed and validated. The JSON Schema the model sees
-is derived from the same type: `@Comment_` becomes `description`, `@Required_` feeds `required`,
-`@EnumAnnotation_` becomes `enum`, `@MaxSize_` becomes `maxLength`.
+is derived from the same type: `Comment` becomes `description`, `Required` feeds `required`,
+`EnumAnnotation` becomes `enum`, `MaxSize` becomes `maxLength`.
 
 ## Turning an existing REST API into an MCP server
 
